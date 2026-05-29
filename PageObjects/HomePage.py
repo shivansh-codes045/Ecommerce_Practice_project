@@ -18,7 +18,7 @@ class HomePage(BasePage):
         time.sleep(5)
 
     def verify_language_change(self):
-        self.presence_of_all_elements_located((By.XPATH, "//div[contains(@class,'content_block')]"))
+        self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class,'content_block')]")))
         time.sleep(2)
         actual_text = self.driver.find_element(By.CSS_SELECTOR, "button[class='primary_btn']")
         print("Actual text on button after language change:", actual_text.text)

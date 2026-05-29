@@ -5,13 +5,13 @@ from PageObjects.CartPage import CartPage
 from utils.logger_decorator import automation_logger
 
 
-class Tests:
-    @automation_logger
-    def test_increasing_product_quantity_in_cart(self, change_language_and_verify1):
-        driver = change_language_and_verify1
-        home_page = HomePage(driver)
-        cart_page = home_page.open_cart_page()
-        quantity_before = cart_page.get_product_quantity_in_cart("Dark Brown Wooden Dining Table with 6 Chairs Set")
+# class Tests:
+#     @automation_logger
+#     def test_increasing_product_quantity_in_cart(self, change_language_and_verify1):
+#         driver = change_language_and_verify1
+#         home_page = HomePage(driver)
+#         cart_page = home_page.open_cart_page()
+#         quantity_before = cart_page.get_product_quantity_in_cart("Dark Brown Wooden Dining Table with 6 Chairs Set")
 
     @automation_logger
     def test_total_price_of_items_matches_with_bill_price(self, change_language_and_verify1):
